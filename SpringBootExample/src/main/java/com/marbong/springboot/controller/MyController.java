@@ -10,24 +10,22 @@ import org.springframework.web.bind.annotation.RestController;
 import com.marbong.springboot.service.MyService;
 
 @RestController
-@RequestMapping(value = "hello")
+@RequestMapping(value = "/")
 public class MyController {
 
 	@Autowired
     private MyService myService;
 	
-	@RequestMapping(value = "/{firstName}/{lastName}", method = RequestMethod.GET)
+	@RequestMapping(value = "{firstName}/{lastName}", method = RequestMethod.GET)
 	public String hello(@PathVariable("firstName") String firstName, @PathVariable("lastName") String lastName) {
 
 		return String.format("{\"message\":\"Hello %s %s\"}", firstName, lastName);
 
 	}
 
-	@RequestMapping(value = "/name")
+	@RequestMapping
     public String Hello(){
         return "hello " + myService.getName();
     }
-	
-	
 	
 }
