@@ -1,1 +1,1 @@
-## SpringBoot 빌드할 때 DockerHub Push까지 연동하는 Sample 
+## Docker 이미지 빌드 시 Docker Hub Push까지 연동하는 Sample 
